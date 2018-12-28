@@ -10,10 +10,12 @@ namespace SignalRConsoleClient
 
         static async Task Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Run!");
             await ConnectionAsync();
 
             Console.WriteLine("Push 'a' to exit!");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             while (true)
             {
                 var k = Console.ReadKey();
